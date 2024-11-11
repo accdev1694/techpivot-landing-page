@@ -1,0 +1,196 @@
+:root {
+  --grey-color: rgb(93, 92, 92);
+  --blue-color: rgba(100, 158, 209, 0.285);
+  --light-blue-color: rgba(161, 197, 228, 0.522);
+  --orange-color: rgb(255, 119, 0);
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-family: quicksand;
+  background: linear-gradient(
+    to bottom,
+    black,
+    rgb(24, 0, 33),
+    black,
+    rgb(0, 0, 44),
+    black,
+    rgb(24, 0, 33),
+    black
+  );
+
+  color: white;
+  font-weight: 100;
+  font-size: 1em;
+}
+
+nav img {
+  width: 100px;
+}
+
+.hero {
+  display: flex;
+}
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  background-color: rgba(100, 158, 209, 0.217);
+  padding: 30px 0;
+}
+
+.hero-preheading {
+  font-size: 1.2em;
+  margin: 10px;
+  color: var(--orange-color);
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+  font-weight: 600;
+}
+.hero-left p:nth-child(3) {
+  font-weight: 600;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+  color: rgb(209, 191, 167);
+  padding: 0 30px;
+}
+h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-shadow: 2px 2px 1px black;
+  font-size: 2.4em;
+  font-family: chakra petch;
+  padding: 0 30px;
+  line-height: 40px;
+}
+
+form {
+  margin: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-blue-color);
+  border-radius: 5px;
+  gap: 5px;
+  padding: 15px 20px;
+  width: 80%;
+}
+
+.inputs {
+  gap: 5px;
+  display: flex;
+}
+.name {
+  width: 40%;
+}
+.email {
+  width: 60%;
+}
+.name-email {
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  outline: none;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+button {
+  font-weight: 900;
+  color: white;
+  background-color: var(--orange-color);
+  padding: 10px auto;
+  border-radius: 2px;
+  width: 100%;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-family: tahoma;
+  text-shadow: 0 0 1px black;
+}
+button:hover {
+  box-shadow: 1px 1px 3px white, -1px -1px 3px white;
+  background-color: rgb(255, 81, 0);
+}
+.book-seat {
+  font-size: 0.8em;
+  font-weight: 800;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.hero-right {
+  width: 50%;
+  background-color: rgb(126, 159, 188);
+  background-image: url("../img/hero-img.jpg");
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+h2 {
+  text-align: center;
+  font-family: chakra petch;
+}
+.section {
+  border-top: 1px solid rgb(29, 29, 29);
+  margin: 50px;
+}
+.courses,
+.benefits {
+  display: flex;
+  /* gap: 100px; */
+  text-align: center;
+}
+.course-image,
+.benefit-image {
+  width: 80%;
+  border-radius: 10px;
+  border: 1px solid var(--grey-color);
+}
+.course,
+.benefit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-title,
+.course-title,
+.benefit-overview,
+.course-overview {
+  width: 80%;
+}
+
+.benefit-overview,
+.course-overview {
+  color: var(--grey-color);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+li{
+  font-weight: 600;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.109);
+  margin: 25px;
+  font-size: 1.2em;
+  list-style:none;
+  color: var(--light-blue-color);
+  
+  border-radius: 10px;
+}
+.section:nth-child(6) form{
+  width: 50%;
+  margin: 40px auto;
+  text-align: center;
+}
+footer{
+  text-align: center;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: var(--light-blue-color);
+}
+
+
