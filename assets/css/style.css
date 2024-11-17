@@ -1,7 +1,7 @@
 :root {
   --grey-color: rgb(93, 92, 92);
   --blue-color: rgba(100, 158, 209, 0.285);
-  --light-blue-color: rgba(161, 197, 228, 0.522);
+  --light-blue-color: #a1c5e485;
   --orange-color: rgb(255, 119, 0);
 }
 
@@ -44,13 +44,29 @@ nav img {
   align-items: center;
   width: 50%;
   text-align: center;
-  background-color: rgba(18, 30, 40, 0.72);
+  background-color: rgba(18, 30, 40, 0.833);
   padding: 30px 0;
 }
 .hero-right {
-  width: 50%;  
+  background-color: rgba(18, 30, 40, 0.551);
+  width: 50%;
+}
+.mode-elements {
+  text-align: center;
 }
 
+.dark-mode {
+  float: right;
+  width: 30px;
+  margin: 20px;
+  border-radius: 30px;
+  border: 1px solid black;
+  box-shadow: 4px 4px 10px rgb(255, 255, 255), -4px -4px 10px rgb(255, 255, 255);
+}
+.dark-mode:hover {
+  background: rgba(255, 255, 255, 0.562);
+  box-shadow: -2px -2px 5px rgb(255, 255, 255);
+}
 .hero-preheading {
   font-size: 1.2em;
   margin: 10px;
@@ -67,12 +83,12 @@ nav img {
 h1 {
   margin-top: 0;
   margin-bottom: 0;
-  font-weight: bold;
+  font-weight: 900;
   text-shadow: 2px 2px 1px black;
-  font-size: 2.4em;
-  font-family: chakra petch;
+  font-size: 4em;
+  font-family: quicksand;
   padding: 0 30px;
-  line-height: 40px;
+  line-height: 65px;
 }
 
 form {
@@ -129,6 +145,14 @@ button:hover {
   margin-bottom: 10px;
 }
 
+.about-us {
+  font-size: 1.2em;
+  text-align: center;
+  /* margin: 0 20px; */
+  line-height: 30px;
+  font-weight: 600;
+  color: var(--light-blue-color);
+}
 
 h2 {
   text-align: center;
@@ -137,7 +161,7 @@ h2 {
 }
 .section {
   border-top: 1px solid rgb(29, 29, 29);
-  margin: 50px;
+  margin: 90px 200px;
 }
 .courses,
 .benefits {
@@ -172,30 +196,48 @@ h2 {
   margin-top: 0;
 }
 
-li{
-  font-weight: 600;
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.109);
-  margin: 25px;
+.question {
+  display: flex;
+  width: 90%;
+  margin: 10px auto;
   font-size: 1.2em;
-  list-style:none;
-  color: var(--light-blue-color);  
+  color: var(--light-blue-color);
+  gap: 20px;
+}
+
+.li {
+  font-weight: 600;
+  padding: 10px 30px;
+  background-color: rgba(255, 255, 255, 0.109);
+  list-style: none;
   border-radius: 10px;
+  width: 90%;
 }
-li:hover{
-  background-color: rgba(255, 255, 255, 0.179);
+
+.plus{
+  font-weight: 800;
+  padding: 10px;
+
+}
+.plus:hover {
+  border-radius: 10px;
+  cursor: pointer;
   color: antiquewhite;
+  height: fit-content;
 }
-.section:nth-child(5) form{
+
+
+.final-cta form {
   width: 50%;
   margin: 40px auto;
   text-align: center;
 }
-footer{
+footer {
   text-align: center;
   padding-bottom: 10px;
   font-weight: 600;
   color: var(--light-blue-color);
 }
-
-
+span {
+  float: right;
+}
