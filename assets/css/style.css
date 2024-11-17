@@ -1,7 +1,7 @@
 :root {
   --grey-color: rgb(93, 92, 92);
-  --blue-color: rgba(100, 158, 209, 0.285);
-  --light-blue-color: #a1c5e485;
+  --blue-color: #649ed149;
+  --light-blue-color: rgba(161, 197, 228, 0.522);
   --orange-color: rgb(255, 119, 0);
 }
 
@@ -12,7 +12,7 @@ body {
   font-family: quicksand;
   background: linear-gradient(
     to bottom,
-    black,
+    rgb(0, 0, 0),
     rgb(24, 0, 33),
     black,
     rgb(0, 0, 44),
@@ -50,18 +50,16 @@ nav img {
 .hero-right {
   background-color: rgba(18, 30, 40, 0.551);
   width: 50%;
-}
-.mode-elements {
-  text-align: center;
+  position: relative;
 }
 
 .dark-mode {
-  float: right;
+  position: fixed;
+  right: 0;
   width: 30px;
   margin: 20px;
   border-radius: 30px;
-  border: 1px solid black;
-  box-shadow: 4px 4px 10px rgb(255, 255, 255), -4px -4px 10px rgb(255, 255, 255);
+  box-shadow: -1px -1px 10px rgb(255, 255, 255);
 }
 .dark-mode:hover {
   background: rgba(255, 255, 255, 0.562);
@@ -89,6 +87,7 @@ h1 {
   font-family: quicksand;
   padding: 0 30px;
   line-height: 65px;
+  color: white;
 }
 
 form {
@@ -151,7 +150,7 @@ button:hover {
   /* margin: 0 20px; */
   line-height: 30px;
   font-weight: 600;
-  color: var(--light-blue-color);
+  color: var(--grey-color);
 }
 
 h2 {
@@ -201,31 +200,30 @@ h2 {
   width: 90%;
   margin: 10px auto;
   font-size: 1.2em;
-  color: var(--light-blue-color);
+  /* color: var(--grey-color); */
   gap: 20px;
 }
 
 .li {
   font-weight: 600;
   padding: 10px 30px;
-  background-color: rgba(255, 255, 255, 0.109);
+  background-color: #ffffff1c;
   list-style: none;
   border-radius: 10px;
   width: 90%;
+  /* color: white; */
 }
 
-.plus{
+.plus {
   font-weight: 800;
   padding: 10px;
-
 }
 .plus:hover {
   border-radius: 10px;
   cursor: pointer;
-  color: antiquewhite;
+  /* color: antiquewhite; */
   height: fit-content;
 }
-
 
 .final-cta form {
   width: 50%;

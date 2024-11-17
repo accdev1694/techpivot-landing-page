@@ -14,9 +14,24 @@ const answers = [
 const listEl = document.querySelectorAll(".plus");
 for (let i = 0; i < listEl.length; i++) {
   listEl[i].addEventListener("mouseenter", () => {
-    document.querySelectorAll('.li')[i].innerHTML += `<div class='ans'><br>${answers[i]}</div>`;
+    document.querySelectorAll(".li")[
+      i
+    ].innerHTML += `<div class='ans'><br>${answers[i]}</div>`;
   });
-  listEl[i].addEventListener('mouseleave', ()=>{
-    document.querySelectorAll('.ans').forEach(div => div.remove())
-  })
+  listEl[i].addEventListener("mouseleave", () => {
+    document.querySelectorAll(".ans").forEach((div) => div.remove());
+  });
 }
+
+const darkMode = document.querySelector(".dark-mode");
+darkMode.addEventListener("click", switchMode);
+function switchMode() {
+  
+  console.log("dark to light");
+  document.querySelector(".dark-mode").setAttribute("src", "../assets/img/light-mode.png");
+  document.body.style.background = "none";
+  document.body.style.background = "#ffffff";
+  document.body.style.color = "#000000";
+  document.querySelector(".li").style.backgroundColor = "#5f52521c";
+}
+
