@@ -14,7 +14,7 @@ const answers = [
 const listEl = document.querySelectorAll(".plus");
 for (let i = 0; i < listEl.length; i++) {
   listEl[i].addEventListener("mouseenter", () => {
-    document.querySelectorAll(".li")[
+    document.querySelectorAll(".list-q")[
       i
     ].innerHTML += `<div class='ans'><br>${answers[i]}</div>`;
   });
@@ -23,15 +23,50 @@ for (let i = 0; i < listEl.length; i++) {
   });
 }
 
-const darkMode = document.querySelector(".dark-mode");
-darkMode.addEventListener("click", switchMode);
-function switchMode() {
-  
-  console.log("dark to light");
-  document.querySelector(".dark-mode").setAttribute("src", "../assets/img/light-mode.png");
-  document.body.style.background = "none";
-  document.body.style.background = "#ffffff";
-  document.body.style.color = "#000000";
-  document.querySelector(".li").style.backgroundColor = "#5f52521c";
-}
 
+// implement light and dark toggle
+const mode = document.querySelector(".mode");
+mode.addEventListener("click", switchMode);
+
+function switchMode() {
+  document.body.classList.toggle('dark')
+  document.body.classList.toggle('light')
+
+  document.querySelectorAll('.list-q').forEach(element =>{
+  if (element.classList.contains('dk-bg')) {
+    console.log('contains dk');
+    
+    element.classList.remove('dk-bg')
+    element.classList.add('lt-bg')
+    mode.setAttribute("src", "./assets/img/light-mode.png");
+
+  } else{
+    element.classList.remove('lt-bg')
+    element.classList.add('dk-bg')
+    mode.setAttribute("src", "./assets/img/dark-mode.png");
+  }
+})
+  
+  // to light mode 
+  // if (mode.getAttribute("src") === "./assets/img/dark-mode.png") {
+  //   console.log("to light");
+
+  //   mode.setAttribute("src", "./assets/img/light-mode.png");
+  //   document.body.style.background = "none";
+  //   document.body.style.color = "#000000";
+  //   const listQ = document.querySelectorAll(".list-q");
+  //   listQ.forEach((list) => (list.style.background = "#a1c5e485"));
+  //   document.querySelector("footer").style.color = "#5d5c5c";
+  // } else {
+  //   // back to dark mode 
+  //   document
+  //     .querySelector(".mode")
+  //     .setAttribute("src", "./assets/img/dark-mode.png");
+  //   document.body.style.background =
+  //     "linear-gradient(to bottom, #000000, #180021, #000000, #00002c, #000000, #180021, #000000)";
+  //   document.body.style.color = "#ffffff";
+  //   const listQ = document.querySelectorAll(".list-q");
+  //   listQ.forEach((list) => (list.style.background = "#ffffff1c"));
+  //   document.querySelector("footer").style.color = "#a1c5e485";
+  // }
+}

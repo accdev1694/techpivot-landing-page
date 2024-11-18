@@ -1,7 +1,7 @@
 :root {
-  --grey-color: rgb(93, 92, 92);
+  --grey-color: #5d5c5c;
   --blue-color: #649ed149;
-  --light-blue-color: rgba(161, 197, 228, 0.522);
+  --light-blue-color: #d4dae0de;
   --orange-color: rgb(255, 119, 0);
 }
 
@@ -12,16 +12,16 @@ body {
   font-family: quicksand;
   background: linear-gradient(
     to bottom,
-    rgb(0, 0, 0),
-    rgb(24, 0, 33),
-    black,
-    rgb(0, 0, 44),
-    black,
-    rgb(24, 0, 33),
-    black
+    #000000,
+    #180021,
+    #000000,
+    #00002c,
+    #000000,
+    #180021,
+    #000000
   );
 
-  color: white;
+  color: #ffffff;
   font-weight: 100;
   font-size: 1em;
 }
@@ -53,7 +53,7 @@ nav img {
   position: relative;
 }
 
-.dark-mode {
+.mode {
   position: fixed;
   right: 0;
   width: 30px;
@@ -61,8 +61,8 @@ nav img {
   border-radius: 30px;
   box-shadow: -1px -1px 10px rgb(255, 255, 255);
 }
-.dark-mode:hover {
-  background: rgba(255, 255, 255, 0.562);
+.mode:hover {
+  background: #ffffff8f;
   box-shadow: -2px -2px 5px rgb(255, 255, 255);
 }
 .hero-preheading {
@@ -99,6 +99,9 @@ form {
   gap: 5px;
   padding: 15px 20px;
   width: 80%;
+}
+.caveat{
+  color: black;
 }
 
 .inputs {
@@ -200,18 +203,25 @@ h2 {
   width: 90%;
   margin: 10px auto;
   font-size: 1.2em;
-  /* color: var(--grey-color); */
   gap: 20px;
 }
 
-.li {
+.list-q {
   font-weight: 600;
   padding: 10px 30px;
-  background-color: #ffffff1c;
   list-style: none;
   border-radius: 10px;
   width: 90%;
   /* color: white; */
+}
+
+.dk-bg{
+  background: #ffffff1c;
+}
+
+.lt-bg{
+  background: #d4dae0de
+  ;
 }
 
 .plus {
@@ -234,8 +244,14 @@ footer {
   text-align: center;
   padding-bottom: 10px;
   font-weight: 600;
-  color: var(--light-blue-color);
+  /* color: var(--light-blue-color); */
 }
 span {
   float: right;
 }
+
+.light{
+  color: #000000;
+  background: none;
+}
+
