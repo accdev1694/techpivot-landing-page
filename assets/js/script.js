@@ -34,7 +34,6 @@ function switchMode() {
 
   document.querySelectorAll('.list-q').forEach(element =>{
   if (element.classList.contains('dk-bg')) {
-    console.log('contains dk');
     
     element.classList.remove('dk-bg')
     element.classList.add('lt-bg')
@@ -46,27 +45,4 @@ function switchMode() {
     mode.setAttribute("src", "./assets/img/dark-mode.png");
   }
 })
-  
-  // to light mode 
-  // if (mode.getAttribute("src") === "./assets/img/dark-mode.png") {
-  //   console.log("to light");
-
-  //   mode.setAttribute("src", "./assets/img/light-mode.png");
-  //   document.body.style.background = "none";
-  //   document.body.style.color = "#000000";
-  //   const listQ = document.querySelectorAll(".list-q");
-  //   listQ.forEach((list) => (list.style.background = "#a1c5e485"));
-  //   document.querySelector("footer").style.color = "#5d5c5c";
-  // } else {
-  //   // back to dark mode 
-  //   document
-  //     .querySelector(".mode")
-  //     .setAttribute("src", "./assets/img/dark-mode.png");
-  //   document.body.style.background =
-  //     "linear-gradient(to bottom, #000000, #180021, #000000, #00002c, #000000, #180021, #000000)";
-  //   document.body.style.color = "#ffffff";
-  //   const listQ = document.querySelectorAll(".list-q");
-  //   listQ.forEach((list) => (list.style.background = "#ffffff1c"));
-  //   document.querySelector("footer").style.color = "#a1c5e485";
-  // }
 }

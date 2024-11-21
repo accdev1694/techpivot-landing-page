@@ -3,226 +3,263 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechPivot Landing Page</title>
+    <meta
+      name="description"
+      content="Free Tech Webinar on Project Management, Business Analysis & Software Development"
+    />
+    <title>TechPivot - Free Tech Webinar</title>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/img/curly-bracket.png"
+    />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Dhurjati&family=Doto:wght@100..900&family=Geostar&family=Geostar+Fill&family=Londrina+Outline&family=Stick+No+Bills:wght@200..800&family=Wallpoet&family=Quicksand:wght@300..700&display=swap");
-    </style>
   </head>
   <body>
-    <!-- hero section -->
-    <section class="hero">
-      <!-- training information on hero section -->
-      <div class="hero-left">
-        <p class="hero-preheading">Free Tech Webinar Registration!</p>
-        <h1>
-          BECOME A <br />PROJECT MANAGER, <br />BUSINESS ANALYST <br />OR
-          SOFTWARE DEVELOPER
-        </h1>
-        <p>
-          Begin this Exciting Journey into the Tech World by attending this
-          webinar, for Free!!! Land a High-Paying Tech Role or Become a
-          TechnoPreneur
-        </p>
-        <!-- cta -->
-        <form>
-          <div class="book-seat">BOOK A SEAT AT THE UPCOMING WORKSHOP?</div>
-          <div class="inputs">
+
+    <!-- mode switcher element -->
+    <div
+      class="mode-switcher"
+      role="button"
+      aria-label="Toggle dark/light mode"
+    >
+      <img
+        class="mode-img"
+        src="./assets/img/light-mode.png"
+        alt="Theme toggle icon"
+        id="mode-icon"
+      />
+    </div>
+
+    <!-- header section with nav -->
+    <header class="main-header">
+      <nav class="nav-container">
+        <a href="#home" class="logo">
+          <img src="./assets/img/logo.png" alt="TechPivot Logo" id="home"/>
+        </a>
+        <ul class="nav-list">
+          <li><a href="#who-we-are" class="nav-link">Who we are</a></li>
+          <li>
+            <a href="#what-you-will-learn" class="nav-link"
+              >What you will learn</a
+            >
+          </li>
+          <li>
+            <a href="#who-should-attend" class="nav-link">Who should attend</a>
+          </li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main section -->
+    <main>
+      <section class="section hero" aria-label="Free Tech Webinar Registration">
+        <!-- hero-left -->
+        <div class="hero-left">
+          <h1>
+            SOFTWARE DEVELOPMENT, BUSINESS ANALYSIS & PROJECT MANAGEMENT WEBINAR
+          </h1>
+          <h3>
+            Begin this Exciting Journey into the Tech World by attending this
+            webinar, for Free!!! Land a High-Paying Tech Role or Become a
+            TechnoPreneur
+          </h3>
+          <form action="/" method="POST">
+            <label for="first-name" class="sr-only">First Name</label>
             <input
-              class="name name-email"
               type="text"
+              name="first-name"
+              id="first-name"
               placeholder="First Name"
+              required
             />
+            <label for="email" class="sr-only"></label>
             <input
-              class="email name-email"
-              type="text"
-              placeholder="Your Email"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
             />
+            <button type="submit" id="submit-btn">Book my Seat!</button>
+          </form>
+          <p class="privacy-note">
+            We will never share your information with anyone
+          </p>
+        </div>
+        <!-- hero-right -->
+        <div class="hero-right"></div>
+      </section>
+
+      <!-- about us section -->
+      <section class="section about-us" id="who-we-are">
+        <h2 class="section-heading">Who We Are</h2>
+        <p class="section-content">
+          At TechPivot Academy, we deliver industry-standard training through
+          our highly qualified coaches. Our Project Management and Business
+          Intelligence coach holds active certification and leads enterprise
+          projects at the University of Birmingham. Our Software Development
+          coach is Harvard CS50 certified, trained through Birmingham Skills
+          Bootcamp, and actively contributes to the tech community through
+          blogging and development. Experience practical, hands-on training that
+          transforms theoretical knowledge into real-world technical expertise.
+        </p>
+      </section>
+
+      <!-- who should attend section -->
+      <section class="section attendees" id="who-should-attend">
+        <h2 class="section-heading">WHO SHOULD ATTEND?</h2>
+        <p class="section-content">
+          Our webinar is designed for ambitious individuals seeking to enter or
+          advance in the tech industry. Whether you're new to the field, looking
+          for better opportunities, or planning a career transition, we provide
+          the knowledge and guidance to help you succeed.
+        </p>
+
+        <div class="cards-container">
+          <!-- corporate jobs -->
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/img/immigrant.jpg"
+              alt="an african male with a phone and cross-bag looking thoughtful"
+            />
+            <h3 class="card-title">IMMIGRANTS SEEEKING FOR CORPORATE JOBS</h3>
+            <p class="card-description">
+              Navigate the corporate landscape with confidence. Learn how to
+              leverage your unique perspective, adapt to workplace culture, and
+              position yourself for success in the tech industry. Perfect for
+              skilled immigrants seeking professional opportunities.
+            </p>
           </div>
-
-          <button class="name-email">BOOK MY SEAT !!!</button>
-          <div class="caveat">We will never share your information with anyone</div>
-        </form>
-      </div>
-      <div class="hero-right">
-        <img
-          id="mode-image"
-          class="mode"
-          src="./assets/img/dark-mode.png"
-          alt=""
-        />
-      </div>
-    </section>
-
-    <!-- who we are -->
-    <section class="section">
-      <h2 class="dark">WHO WE ARE</h2>
-      <p class="about-us">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda non
-        ipsam aperiam? Veritatis labore veniam voluptate modi harum, tempore aut
-        quam minus aliquam ea consequatur. Ex commodi velit alias quam. Totam
-        culpa quod exercitationem, corrupti minus vitae saepe amet quam?
-        Aspernatur animi vel ducimus quae tempora quod, pariatur dicta aut.
-        Perferendis hic ab ad commodi esse nobis incidunt asperiores dolorem!
-        Illum fugit quasi quisquam non amet eligendi assumenda dolor, voluptas
-        sunt aliquam consequuntur quaerat animi nam atque quam laborum cumque
-        quos? In ad quas laboriosam quod consectetur, perferendis esse
-        necessitatibus? Eius fugit similique itaque minus repellat amet,
-        voluptatem optio? Pariatur eum illo dolor sit necessitatibus ab
-        blanditiis voluptatum itaque, eaque et exercitationem sunt repellat
-        totam iusto nobis mollitia modi laudantium?
-      </p>
-    </section>
-
-    <!-- training benefits -->
-    <section class="section">
-      <h2 class="dark">WHO SHOULD ATTEND</h2>
-      <div class="benefits">
-        <!-- immigrant job seekers -->
-        <div class="benefit">
-          <img class="benefit-image" src="./assets/img/immigrant.jpg" alt="" />
-          <h3 class="benefit-title dark">IMMIGRANTS SEEEKING FOR CORPORATE JOBS</h3>
-          <p class="benefit-overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sed
-            fuga odio dicta, autem non earum ut maiores possimus ipsa eos
-            quisquam blanditiis cum nostrum itaque quaerat odit minima aut!
-          </p>
+          <!-- career fulfilment -->
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/img/career.jpg"
+              alt="a career woman in suit and standing confidently"
+            />
+            <h3 class="card-title">THOSE SEEKING CAREER FULFILMENT</h3>
+            <p class="card-description">
+              Transform your career trajectory with in-demand tech skills.
+              Whether you're feeling stagnant or seeking new challenges,
+              discover how tech roles can provide the growth, stability, and
+              satisfaction you desire.
+            </p>
+          </div>
+          <!-- tech transition -->
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/img/technology.jpg"
+              alt="a man working with modern technology"
+            />
+            <h3 class="card-title">THOSE LOOKING TO TRANSITION INTO TECH</h3>
+            <p class="card-description">
+              Make a smooth transition into tech from any background. Learn the
+              essential skills, industry insights, and practical steps needed to
+              start your journey in software development, business analysis, or
+              project management.
+            </p>
+          </div>
         </div>
-        <!-- career fulfilment -->
-        <div class="benefit">
-          <img class="benefit-image" src="./assets/img/career.jpg" alt="" />
-          <h3 class="benefit-title dark">THOSE SEEKING CAREER FULFILMENT</h3>
-          <p class="benefit-overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sed
-            fuga odio dicta, autem non earum ut maiores possimus ipsa eos
-            quisquam blanditiis cum nostrum itaque quaerat odit minima aut!
-          </p>
-        </div>
-        <!-- tech transition -->
-        <div class="benefit">
-          <img class="benefit-image" src="./assets/img/technology.jpg" alt="" />
-          <h3 class="benefit-title dark">THOSE LOOKING TO TRANSITION INTO TECH</h3>
-          <p class="benefit-overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sed
-            fuga odio dicta, autem non earum ut maiores possimus ipsa eos
-            quisquam blanditiis cum nostrum itaque quaerat odit minima aut!
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- training features -->
-    <section class="section">
-      <h2 class="dark">WHAT YOU WILL LEARN</h2>
-      <div class="courses">
-        <!-- business analysis -->
-        <div class="course ba">
-          <img class="course-image" src="./assets/img/ba.png" alt="" />
-          <h3 class="course-title dark">BUSINESS ANALYSIS</h3>
-          <p class="course-overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sed
-            fuga odio dicta, autem non earum ut maiores possimus ipsa eos
-            quisquam blanditiis cum nostrum itaque quaerat odit minima aut!
-          </p>
-        </div>
-        <!-- project management -->
-        <div class="course pm">
-          <img class="course-image" src="./assets/img/pm.png" alt="" />
-          <h3 class="course-title dark">PROJECT MANAGEMENT</h3>
-          <p class="course-overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sed
-            fuga odio dicta, autem non earum ut maiores possimus ipsa eos
-            quisquam blanditiis cum nostrum itaque quaerat odit minima aut!
-          </p>
-        </div>
-        <!-- software development -->
-        <div class="course sd">
-          <img class="course-image" src="./assets/img/sd.png" alt="" />
-          <h3 class="course-title dark">SOFTWARE DEVELOPMENT</h3>
-          <p class="course-overview">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia sed
-            fuga odio dicta, autem non earum ut maiores possimus ipsa eos
-            quisquam blanditiis cum nostrum itaque quaerat odit minima aut!
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="faq" class="section">
-      <h2 class="dark">FAQ</h2>
-
-      <div class="question dark">
-        <p class = "list-q dk-bg">What will I gain from attending this webinar?</p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">Who is this webinar for?</p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">What topics will be covered?</p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">Do I need prior knowledge to attend?</p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">
-          How does Agile project management differ from traditional project
-          management?
+      <!-- what you will learn section -->
+      <section class="section courses" id="what-you-will-learn">
+        <h2 class="section-heading">WHAT YOU WILL LEARN</h2>
+        <p class="section-content">
+          Discover comprehensive training in three core tech disciplines -
+          Software Development, Business Analysis, and Project Management. Our
+          expert-led curriculum combines theoretical knowledge with practical
+          skills, preparing you for high-demand roles in the technology sector.
+          Learn industry-standard tools, methodologies, and best practices that
+          align with current market needs.
         </p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">
-          What is the role of a business analyst in a tech project?
-        </p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">
-          How does project management interact with software development?
-        </p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">
-          What are some essential tools we should know in these fields?
-        </p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">Will this webinar offer hands-on exercises?</p>
-        <p class="plus">+</p>
-      </div>
-      <div class="question dark">
-        <p class = "list-q dk-bg">
-          What are some next steps if I want to pursue a career in one of these
-          fields?
-        </p>
-        <p class="plus">+</p>
-      </div>
-    </section>
-
-    <section class="section final-cta">
-      <!-- cta -->
-      <form>
-        <div class="book-seat">BOOK A SEAT AT THE UPCOMING WORKSHOP?</div>
-        <div class="inputs">
-          <input class="name name-email" type="text" placeholder="First Name" />
-          <input
-            class="email name-email"
-            type="text"
-            placeholder="Your Email"
-          />
+        <div class="cards-container">
+          <!-- software development -->
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/img/sd.png"
+              alt="Isometric illustration of developer coding at computer workstation surrounded by programming language icons and tools"
+            />
+            <h3 class="card-title">SOFTWARE DEVELOPMENT</h3>
+            <p class="card-description">
+              Learn modern programming fundamentals, web development essentials,
+              and industry best practices. Master key coding concepts and gain
+              hands-on experience building real-world applications.
+            </p>
+          </div>
+          <!-- business analysis -->
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/img/ba.png"
+              alt="Business team analyzing financial data and metrics on clipboard with calculator and coin stacks"
+            />
+            <h3 class="card-title">BUSINESS ANALYSIS</h3>
+            <p class="card-description">
+              Master requirements gathering, stakeholder management, and process
+              modeling. Learn to bridge business needs with technical solutions
+              through effective analysis and documentation.
+            </p>
+          </div>
+          <!-- project management -->
+          <div class="card">
+            <img
+              class="card-image"
+              src="./assets/img/pm.png"
+              alt="Illustration of project team collaborating on task management, with calendar, metrics and progress tracking"
+            />
+            <h3 class="card-title">PROJECT MANAGEMENT</h3>
+            <p class="card-description">
+              Develop skills in Agile methodologies, team leadership, and
+              project delivery. Learn to plan, execute, and monitor projects
+              while managing stakeholders and resources effectively.
+            </p>
+          </div>
         </div>
+      </section>
 
-        <button class="name-email">BOOK MY SEAT !!!</button>
-        <div class="caveat">We will never share your information with anyone</div>
-      </form>
-    </section>
-    <footer>Copyright&copy; 2014</footer>
+      <!-- faq section -->
+      <section class="section" id="faq">
+        <h2 class="section-heading">FAQ</h2>
+        <div class="faq-items">
+          <!-- faq items will be inserted here via innerhtml -->
+          <!-- <div class="faq-item">
+            <div class="question">
+              <p></p>
+              <span class="toggle-icon">+</span>
+            </div>
+            <div class="answer">
+              <p></p>
+            </div>
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <footer class="section">
+      <nav class="footer-nav">
+        <ul class="nav-list">
+          <li><a href="#who-we-are" class="nav-link">Who we are</a></li>
+          <li>
+            <a href="#what-you-will-learn" class="nav-link"
+              >What you will learn</a
+            >
+          </li>
+          <li>
+            <a href="#who-should-attend" class="nav-link">Who should attend</a>
+          </li>
+          <li><a href="#faq" class="nav-link">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        <p>&copy; 2024 TechPivot Academy. All rights reserved.</p>
+      </div>
+      <a href="#home" class="back-to-top">Back to Top</a>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
   </body>
