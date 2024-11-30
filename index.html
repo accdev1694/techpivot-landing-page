@@ -9,6 +9,10 @@
     />
     <title>TechPivot - Free Tech Webinar</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;600;700&family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="icon"
       type="image/x-icon"
       href="./assets/img/curly-bracket.png"
@@ -16,36 +20,35 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-
     <!-- mode switcher element -->
-    <div
-      class="mode-switcher"
-      role="button"
-      aria-label="Toggle dark/light mode"
-    >
-      <img
-        class="mode-img"
-        src="./assets/img/light-mode.png"
-        alt="Theme toggle icon"
-        id="mode-icon"
-      />
-    </div>
+    <img
+      src="./assets/img/light-mode.png"
+      alt="Toggle theme"
+      class="mode-img"
+    />
+    <!-- back to top -->
+    <a href="#home" class="to-top">To-Top</a>
+
 
     <!-- header section with nav -->
-    <header class="main-header">
+    <header id="home" class="main-header">
+      <!-- logo -->
+      <a href="#home" class="logo">
+        <img src="./assets/img/logo.png" alt="TechPivot Logo" />
+      </a>
       <nav class="nav-container">
-        <a href="#home" class="logo">
-          <img src="./assets/img/logo.png" alt="TechPivot Logo" id="home"/>
-        </a>
+        <!-- hamburger menu -->
+        <button class="menu-btn">
+          <span class="hamburger"></span>
+        </button>
+        <!-- actual menu -->
         <ul class="nav-list">
-          <li><a href="#who-we-are" class="nav-link">Who we are</a></li>
+          <li><a href="#about-us" class="nav-link">About Us</a></li>
           <li>
-            <a href="#what-you-will-learn" class="nav-link"
-              >What you will learn</a
-            >
+            <a href="#courses" class="nav-link">Courses</a>
           </li>
           <li>
-            <a href="#who-should-attend" class="nav-link">Who should attend</a>
+            <a href="#benefits" class="nav-link">Benefits</a>
           </li>
           <li><a href="#faq" class="nav-link">FAQ</a></li>
         </ul>
@@ -53,12 +56,14 @@
     </header>
 
     <!-- main section -->
+
     <main>
-      <section class="section hero" aria-label="Free Tech Webinar Registration">
+      <section class="hero" aria-label="Free Tech Webinar Registration">
         <!-- hero-left -->
         <div class="hero-left">
           <h1>
-            SOFTWARE DEVELOPMENT, BUSINESS ANALYSIS & PROJECT MANAGEMENT WEBINAR
+            WEB DEVELOPMENT <br />BUSINESS ANALYSIS <br />PROJECT MANAGEMENT
+            <br />WEBINAR
           </h1>
           <h3>
             Begin this Exciting Journey into the Tech World by attending this
@@ -66,23 +71,27 @@
             TechnoPreneur
           </h3>
           <form action="/" method="POST">
-            <label for="first-name" class="sr-only">First Name</label>
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              placeholder="First Name"
-              required
-            />
-            <label for="email" class="sr-only"></label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-              required
-            />
-            <button type="submit" id="submit-btn">Book my Seat!</button>
+            <div class="form-inputs name-input">
+              <label for="first-name" class="sr-only">First Name:</label>
+              <input
+                type="text"
+                name="first-name"
+                id="first-name"
+                placeholder="Your First Name"
+                required
+              />
+            </div>
+            <div class="form-inputs email-input">
+              <label for="email" class="sr-only">Email:</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+            </div>
+            <button type="submit" id="submit-btn">BOOK MY SEAT</button>
           </form>
           <p class="privacy-note">
             We will never share your information with anyone
@@ -93,23 +102,23 @@
       </section>
 
       <!-- about us section -->
-      <section class="section about-us" id="who-we-are">
-        <h2 class="section-heading">Who We Are</h2>
+      <section class="section about-us" id="about-us">
+        <h2 class="section-heading">About Us</h2>
         <p class="section-content">
           At TechPivot Academy, we deliver industry-standard training through
           our highly qualified coaches. Our Project Management and Business
           Intelligence coach holds active certification and leads enterprise
           projects at the University of Birmingham. Our Software Development
-          coach is Harvard CS50 certified, trained through Birmingham Skills
-          Bootcamp, and actively contributes to the tech community through
-          blogging and development. Experience practical, hands-on training that
-          transforms theoretical knowledge into real-world technical expertise.
+          coach is Birmingham Skills Bootcamp as well as Harvard CS50 trained,
+          and actively contributes to the tech community through blogging and
+          development. Experience practical, hands-on training that transforms
+          theoretical knowledge into real-world technical expertise.
         </p>
       </section>
 
-      <!-- who should attend section -->
-      <section class="section attendees" id="who-should-attend">
-        <h2 class="section-heading">WHO SHOULD ATTEND?</h2>
+      <!-- Benefits section -->
+      <section class="section attendees" id="benefits">
+        <h2 class="section-heading">Benefits</h2>
         <p class="section-content">
           Our webinar is designed for ambitious individuals seeking to enter or
           advance in the tech industry. Whether you're new to the field, looking
@@ -166,9 +175,9 @@
         </div>
       </section>
 
-      <!-- what you will learn section -->
-      <section class="section courses" id="what-you-will-learn">
-        <h2 class="section-heading">WHAT YOU WILL LEARN</h2>
+      <!-- Courses section -->
+      <section class="section courses" id="courses">
+        <h2 class="section-heading">Courses</h2>
         <p class="section-content">
           Discover comprehensive training in three core tech disciplines -
           Software Development, Business Analysis, and Project Management. Our
@@ -228,37 +237,29 @@
         <h2 class="section-heading">FAQ</h2>
         <div class="faq-items">
           <!-- faq items will be inserted here via innerhtml -->
-          <!-- <div class="faq-item">
+          <div class="faq-item">
             <div class="question">
-              <p></p>
+              <p>What will I gain from attending this webinar?</p>
               <span class="toggle-icon">+</span>
             </div>
             <div class="answer">
-              <p></p>
+              <p>
+                You will gain practical insights into the fundamentals of
+                software development, project management, and business analysis,
+                plus strategies for navigating tech career paths and leveraging
+                Agile methodologies to work more effectively in a team.
+              </p>
             </div>
-          </div> -->
+          </div>
         </div>
       </section>
     </main>
-    <footer class="section">
-      <nav class="footer-nav">
-        <ul class="nav-list">
-          <li><a href="#who-we-are" class="nav-link">Who we are</a></li>
-          <li>
-            <a href="#what-you-will-learn" class="nav-link"
-              >What you will learn</a
-            >
-          </li>
-          <li>
-            <a href="#who-should-attend" class="nav-link">Who should attend</a>
-          </li>
-          <li><a href="#faq" class="nav-link">FAQ</a></li>
-        </ul>
-      </nav>
+
+    <!-- footer -->
+    <footer class="section footer">
       <div class="copyright">
         <p>&copy; 2024 TechPivot Academy. All rights reserved.</p>
       </div>
-      <a href="#home" class="back-to-top">Back to Top</a>
     </footer>
 
     <script src="./assets/js/script.js"></script>
